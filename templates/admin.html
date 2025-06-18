@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Админ-панель</title>
+  <style>
+    body {
+      background: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #444;
+      padding: 10px;
+      text-align: left;
+    }
+    form {
+      display: inline;
+    }
+    select, button {
+      background: #2a2a2a;
+      color: white;
+      border: 1px solid #555;
+      padding: 5px;
+      margin-left: 5px;
+    }
+    h1 {
+      margin-bottom: 15px;
+    }
+    a {
+      color: #ccc;
+    }
+    a:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Админ-панель</h1>
+  <a href="/">← Назад в чат</a>
+
+  <table>
+    <tr>
+      <th>Пользователь</th>
+      <th>Роль</th>
+      <th>Mute Until</th>
+      <th>Действия</th>
+    </tr>
+    {% for name, user in users.items() %}
+      <tr>
+        <td>{{ name }}</td>
+        <td>{{ user.role }}</td>
+        <td>{{ user.mute_until or 'Не в муте' }}</td>
+        <td>
+          <form method="post">
+            <input type="hidden" name="target_user" value="{{ name }}">
+            <input type="hidden" name="action" value="mute">
+            <select name="duration">
+              <option value="1">1 мин</option>
+              <option value="5">5 мин</option>
+              <option value="15">15 мин</option>
+              <option value="60">1 час</option>
+            </select>
+            <button type="submit">🔇</button>
+          </form>
+
+          <form method="post">
+            <input type="hidden" name="target_user" value="{{ name }}">
+            <input type="hidden" name="action" value="unmute">
+            <button type="submit">🔊</button>
+          </form>
+
+          <form method="post">
+            <input type="hidden" name="target_user" value="{{ name }}">
+            <input type="hidden" name="action" value="set_role">
+            <select name="new_role">
+              <option value="user">user</option>
+              <option value="admin">admin</option>
+            </select>
+            <button type="submit">Сменить</button>
+          </form>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

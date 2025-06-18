@@ -1,0 +1,50 @@
+{
+  "loloshka_shka": {
+    "password": "scrypt:32768:8:1$93BPksYJkLbDR1rP$4e740a901794a4c5c9746e9189d943cf69903716f66d06e0f6c6c10ba7e46fa3792ef43ec64418aa3bd90ddabf65a46333d763890128e04f1570557c9b591933",
+    "role": "admin",
+    "avatar": "default_avatar.png",
+    "status": "\u041e\u043d\u043b\u0430\u0439\u043d"
+  },
+  "\u0430": {
+    "password": "scrypt:32768:8:1$FTu0QWzFbMX8Ea1W$6960e4680b94e66c930169efe493a6a90448bd17cd146a28b1ad2a9802e977a62608208ad110c3435c24b7b801b1582119777c7da4d34099f9dd39705ca5e576",
+    "role": "user",
+    "avatar": "default_avatar.png",
+    "status": "\u041e\u043d\u043b\u0430\u0439\u043d"
+  },
+  "f": {
+    "password": "scrypt:32768:8:1$5vazBZJvBLdUEtqB$7ebe84faeeebccc9e75fd5031d029f631cc572b23b37bbc9adc36e2b896d797d1e123e46888de4d72fa6d5e9e789f9710012ffd3e5fb73b6c577f5d4dd2befa7",
+    "role": "user",
+    "avatar": "default_avatar.png",
+    "status": "\u041e\u043d\u043b\u0430\u0439\u043d",
+    "muted": true
+  },
+  "lolos": {
+    "password": "kazah",
+    "role": "user",
+    "status": "\u041e\u043d\u043b\u0430\u0439\u043d",
+    "avatar": "default_avatar.png",
+    "mute_until": ""
+  },
+  "loloshka": {
+    "password": "kazah",
+    "role": "user",
+    "status": "\u041e\u043d\u043b\u0430\u0439\u043d",
+    "avatar": "default_avatar.png",
+    "mute_until": ""
+  },
+  "\u0433\u043b\u0430\u0433\u043e\u043b": {
+    "password": "\u0435\u0435\u0435",
+    "role": "user",
+    "status": "\u041e\u043d\u043b\u0430\u0439\u043d",
+    "avatar": "default_avatar.png",
+    "mute_until": ""
+  },
+  "\u0413\u043b\u0430\u0432\u043d\u0430\u044f \u0410\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f": {
+    "password": "f",
+    "role": "admin",
+    "status": "\u041e\u043d\u043b\u0430\u0439\u043d",
+    "avatar": "\u0413\u043b\u0430\u0432\u043d\u0430\u044f \u0410\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f.png",
+    "mute_until": "",
+    "hide_profile": false
+  }
+}

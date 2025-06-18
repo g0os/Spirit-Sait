@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Профиль {{ target }}</title>
+  <style>
+    body {
+      background: #121212;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-card {
+      background: #1f1f1f;
+      padding: 30px;
+      border-radius: 12px;
+      width: 360px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #007bff;
+      box-shadow: 0 0 12px #007bff;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 24px;
+      text-shadow: 0 0 6px #007bff;
+    }
+
+    .role {
+      margin-top: 5px;
+      font-size: 16px;
+      color: #ccc;
+      text-transform: uppercase;
+    }
+
+    .back {
+      display: block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #ccc;
+      font-weight: bold;
+    }
+
+    .back:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <img class="avatar" src="{{ url_for('static', filename='avatars/' + users[target].get('avatar', 'default.png')) }}" alt="Аватар">
+
+    <h2>{{ target }}</h2>
+    <div class="role">Роль: {{ users[target].role }}</div>
+
+    <a class="back" href="/channel/general">← Назад</a>
+  </div>
+</body>
+</html>

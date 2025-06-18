@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Профиль скрыт</title>
+  <style>
+    body {
+      background: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    .message {
+      font-size: 32px;
+      font-weight: bold;
+      color: #ff4444;
+      text-shadow: 0 0 8px #ff4444, 0 0 16px #aa0000;
+      animation: blink 2s infinite;
+    }
+
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0.8; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="message">Пользователь закрыл профиль</div>
+</body>
+</html>
